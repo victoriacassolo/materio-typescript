@@ -21,40 +21,48 @@ const depositData = [
     logoWidth: 28,
     logoHeight: 29,
     amount: '+$4,650',
-    subtitle: 'Sell UI Kit',
-    title: 'Gumroad Account',
+    link: 'https://www.youtube.com/@IsraelSubira',
+    title: 'Israel Subirá',
+    title2: 'Pr Lucinho',
+    link2: 'https://www.youtube.com/@prlucinho',
     logo: '/images/logos/gumroad.png'
   },
   {
     logoWidth: 38,
     logoHeight: 38,
     amount: '+$92,705',
-    title: 'Mastercard',
-    subtitle: 'Wallet deposit',
+    title: 'ForrestKnight',
+    title2: 'Erick Wendel',
+    link: 'https://www.youtube.com/@fknight',
+    link2: 'https://www.youtube.com/@ErickWendelTraining',
     logo: '/images/logos/mastercard-label.png'
   },
   {
     logoWidth: 20,
     logoHeight: 28,
     amount: '+$957',
-    title: 'Stripe Account',
-    subtitle: 'iOS Application',
+    title: 'Jovens de Negócios',
+    title2: 'Mercurius Crypto',
+    link: 'https://www.youtube.com/user/nicolinoperrucho',
+    link2: 'https://www.youtube.com/@mercurius-crypto',
     logo: '/images/logos/stripe.png'
   },
   {
     logoWidth: 34,
     logoHeight: 32,
     amount: '+$6,837',
-    title: 'American Bank',
-    subtitle: 'Bank Transfer',
+    title: 'ESPN',
+    title2: 'Red Bull TV',
+    link: 'Bank Transfer',
+    link2: '',
     logo: '/images/logos/american-bank.png'
   },
   {
     logoWidth: 33,
     logoHeight: 22,
     amount: '+$446',
-    title: 'Bank Account',
-    subtitle: 'Wallet deposit',
+    title: 'Livros',
+    link: '',
     logo: '/images/logos/citi-bank.png'
   }
 ]
@@ -117,7 +125,7 @@ const DepositWithdraw = () => {
   return (
     <Card sx={{ display: 'flex', justifyContent: 'space-between', flexDirection: ['column', 'column', 'row'] }}>
       <Box sx={{ width: '100%' }}>
-        <CardHeader
+        {/* <CardHeader
           title='Quem procurar sobre essas coisas?'
           sx={{ pt: 5.5, alignItems: 'center', '& .MuiCardHeader-action': { mt: 0.6 } }}
           action={<Typography variant='caption'>View All</Typography>}
@@ -125,7 +133,7 @@ const DepositWithdraw = () => {
             variant: 'h6',
             sx: { lineHeight: '1.6 !important', letterSpacing: '0.15px !important' }
           }}
-        />
+        /> */}
         <CardContent sx={{ pb: theme => `${theme.spacing(5.5)} !important` }}>
           {depositData.map((item: DataType, index: number) => {
             return (
@@ -148,11 +156,12 @@ const DepositWithdraw = () => {
                 >
                   <Box sx={{ marginRight: 2, display: 'flex', flexDirection: 'column' }}>
                     <Typography sx={{ fontWeight: 600, fontSize: '0.875rem' }}>{item.title}</Typography>
-                    <Typography variant='caption'>{item.subtitle}</Typography>
+                    <Typography variant='caption'><a href={item.link} target="_blank">Link</a></Typography>
                   </Box>
-                  <Typography variant='subtitle2' sx={{ fontWeight: 600, color: 'success.main' }}>
-                    {item.amount}
-                  </Typography>
+                  <Box sx={{ marginRight: 2, display: 'flex', flexDirection: 'column' }}>
+                    <Typography sx={{ fontWeight: 600, fontSize: '0.875rem' }}>{item.title2}</Typography>
+                    <Typography variant='caption'><a href={item.link2} target="_blank">Link</a></Typography>
+                  </Box>
                 </Box>
               </Box>
             )
@@ -163,7 +172,7 @@ const DepositWithdraw = () => {
       <Divider flexItem />
 
       <Box sx={{ width: '100%' }}>
-        <CardHeader
+        {/* <CardHeader
           title='5 tópicos na minha vida'
           sx={{ pt: 5.5, alignItems: 'center', '& .MuiCardHeader-action': { mt: 0.6 } }}
           action={<Typography variant='caption'>View All</Typography>}
@@ -171,7 +180,7 @@ const DepositWithdraw = () => {
             variant: 'h6',
             sx: { lineHeight: '1.6 !important', letterSpacing: '0.15px !important' }
           }}
-        />
+        /> */}
         <CardContent sx={{ pb: theme => `${theme.spacing(5.5)} !important` }}>
           {withdrawData.map((item: DataType, index: number) => {
             return (
